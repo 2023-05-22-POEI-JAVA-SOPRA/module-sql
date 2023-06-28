@@ -13,7 +13,7 @@ CREATE TABLE IF NOT EXISTS telephones(
     name VARCHAR(50) NOT NULL,
     manufacturer VARCHAR(50) NOT NULL,
     price NUMERIC CHECK(price > 0) NOT NULL,
-    units_sold INTEGER CHECK(units_sold > 0) NOT NULL,
+    units_sold INTEGER CHECK(units_sold >= 0) NOT NULL,
     UNIQUE(name, manufacturer)
 );
 ```
